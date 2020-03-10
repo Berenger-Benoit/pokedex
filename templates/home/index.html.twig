@@ -5,15 +5,27 @@
 {% block body %}
 
 
-<div class="container">
+<div class="container mt-2">
+    <h1 class="title-home">Liste des pokémons</h1>
+
     <div class="row">
-        <div class="col">
-            <h1 class="title-home">Liste des pokémons</h1>
+        {% for pokemon in pokemons %}
+        <div class="col-lg-4 col-md-4">
+          
             
-            <div>
-                <img src="" alt="">
-                <a href="">Plus de détails</a>
+            <div class="card-pokemon">
+                <h2 class="title-card">{{ pokemon.name}}</h2>
+                <div class="img">
+                    <img class="img-card" src="{{asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
+                </div>
+                <div class="btn-link">
+                    <a class="link-detail" href="">Plus de détails</a>
+                </div>
+                
             </div>
+       
+        </div>
+            {% endfor %}
         </div>
     </div>
 </div>

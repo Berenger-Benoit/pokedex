@@ -2,16 +2,21 @@
 
 namespace App\Controller;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Entity\Pokemon;
+use App\Repository\PokemonRepository;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
     /**
      * @Route("/", name="home")
      */
-    public function index()
+    public function index(PokemonRepository $pr)
     {
-        return $this->render('home/index.html.twig');
+        $pokemons = $pr->findAll();
+        return $this->render('home/index.html.twig', [
+            'pokemons' => $pokemons
+        ]);
     }
 }

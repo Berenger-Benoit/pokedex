@@ -14,8 +14,8 @@ header {
     border-radius: 30px;
     margin-top: 5px;
 }
+
 .nav-link {
-  
     font-size: 1.9rem;
     font-weight: 800;
     text-transform: uppercase;
@@ -24,6 +24,41 @@ header {
 .title-home {
     text-align: center;
 }
+
 #img-nav {
     width: 200px;
+}
+
+.card-pokemon {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+.img-card {
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.title-card , .link-detail{
+    text-align: center;
+}
+.btn-link {
+    display: flex;
+    justify-content: center;
+}
+
+.link-detail {
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #EFE3E3;
+    text-decoration: none;
+    color: black;
+}
+a>.link-detail {
+    text-decoration: none;
 }
