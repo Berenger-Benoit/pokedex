@@ -1,0 +1,29 @@
+body {
+    font-family: 'Bree Serif', serif;
+    background-color: #C14040;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    background-color: #EFE3E3;
+    width: 75%;
+    border-radius: 30px;
+    margin-top: 5px;
+}
+.nav-link {
+  
+    font-size: 1.9rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.title-home {
+    text-align: center;
+}
+#img-nav {
+    width: 200px;
+}

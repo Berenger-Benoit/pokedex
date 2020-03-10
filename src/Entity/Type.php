@@ -28,6 +28,11 @@ class Type
      */
     private $pokemon;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $color;
+
     public function __construct()
     {
         $this->pokemon = new ArrayCollection();
@@ -74,6 +79,18 @@ class Type
             $this->pokemon->removeElement($pokemon);
             $pokemon->removeType($this);
         }
+
+        return $this;
+    }
+
+    public function getColor(): ?string
+    {
+        return $this->color;
+    }
+
+    public function setColor(string $color): self
+    {
+        $this->color = $color;
 
         return $this;
     }
