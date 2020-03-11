@@ -60,3 +60,13 @@ header {
     color: black;
 }
 
+.card-pokemon-single {
+    display: flex;
+    background-color:rgb(120, 46, 180);
+}
+
+.stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

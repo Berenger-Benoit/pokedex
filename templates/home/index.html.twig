@@ -16,9 +16,9 @@
             <div class="card-pokemon">
                 
                 <div class="img">
-                    <img class="img-card" src="{{asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
+                    <img class="img-card" src="{{ asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
                 </div>
-                <a href=""><h2 class="title-card">#{{pokemon.numero}} {{ pokemon.name}}</h2></a>
+                <a href="{{path('show', { 'id': pokemon.id } )}}"><h2 class="title-card">#{{ pokemon.numero }} {{ pokemon.name }}</h2></a>
                 
                 
             </div>

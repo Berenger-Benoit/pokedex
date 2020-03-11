@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{pokemon.name}}{% endblock %}
+
+{% block body %}
+<pre>
+    {{ dump(pokemon) }}
+</pre>
+<div class="container mt-2">
+    <h1 class="title-home">Statistiques de {{ pokemon.name }}</h1>
+
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="card-pokemon-single">
+                <div class="img">
+                    <img class="img-card" src="{{ asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
+                </div>
+                <div class="stats">
+                    <div>
+                        PV - {{ pokemon.pv }}
+                    </div>
+                    <div>
+                        Attaque - {{ pokemon.attaque }}
+                    </div>
+                    <div>
+                        Défense - {{ pokemon.defense }}
+                    </div>
+                    <div>
+                        Attaque spéciale - {{ pokemon.attSpec }}
+                    </div>
+                    <div>
+                        Défense spéciale - {{ pokemon.defSpec }}
+                    </div>
+                    <div>
+                       Vitesse -  {{ pokemon.vitesse }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}
