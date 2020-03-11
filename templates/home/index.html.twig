@@ -14,13 +14,12 @@
           
             
             <div class="card-pokemon">
-                <h2 class="title-card">{{ pokemon.name}}</h2>
+                
                 <div class="img">
                     <img class="img-card" src="{{asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
                 </div>
-                <div class="btn-link">
-                    <a class="link-detail" href="">Plus de détails</a>
-                </div>
+                <a href=""><h2 class="title-card">#{{pokemon.numero}} {{ pokemon.name}}</h2></a>
+                
                 
             </div>
        
