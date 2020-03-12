@@ -30,7 +30,7 @@ header {
 }
 
 .card-pokemon {
-    background-color:rgb(120, 46, 180);
+    background-color: rgb(120, 46, 180);
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -51,22 +51,78 @@ header {
     justify-content: center;
 }
 
-.title-card{
+.title-card {
     text-align: center;
     color: white;
 }
+
 .title-card:hover {
     text-decoration: none;
     color: black;
 }
+.img-card-detail  {
+
+    margin-right: 50px;
+}
 
 .card-pokemon-single {
     display: flex;
-    background-color:rgb(120, 46, 180);
+    background-color: rgb(120, 46, 180);
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
 }
 
 .stats {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-self: center;
+    margin-top: 5px;
+    width: auto;
+}
+
+.progressBar {
+    width: 255px;
+    height: 24px;
+    background-color: #632B2B;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-left: 10px;
+}
+
+.progressBarDetail {
+    display: inline-block;
+    position: absolute;
+    height: 24px;
+    background: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+table {
+    width: 100%;
+    padding-left: 10px;
+}
+
+tr {
+    vertical-align: unset;
+    color: #EFE3E3;
+}
+
+h1 {
+    color: #EFE3E3;
+    text-align: center;
+}
+h4 {
+    margin-right: 15px;
+}
+
+.back-home {
+    display: flex;
+    justify-content: center;
+}
+
+.back-home> a {
+    color: #fff;
 }

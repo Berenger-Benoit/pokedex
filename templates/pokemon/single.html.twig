@@ -3,9 +3,7 @@
 {% block title %}{{pokemon.name}}{% endblock %}
 
 {% block body %}
-<pre>
-    {{ dump(pokemon) }}
-</pre>
+
 <div class="container mt-2">
     <h1 class="title-home">Statistiques de {{ pokemon.name }}</h1>
 
@@ -13,28 +11,97 @@
         <div class="col-lg-12 col-md-12">
             <div class="card-pokemon-single">
                 <div class="img">
-                    <img class="img-card" src="{{ asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
+                    <img class="img-card-detail" src="{{ asset('images/pokemon/') ~ pokemon.numero ~ '.png' }}" alt="">
                 </div>
                 <div class="stats">
-                    <div>
-                        PV - {{ pokemon.pv }}
-                    </div>
-                    <div>
-                        Attaque - {{ pokemon.attaque }}
-                    </div>
-                    <div>
-                        Défense - {{ pokemon.defense }}
-                    </div>
-                    <div>
-                        Attaque spéciale - {{ pokemon.attSpec }}
-                    </div>
-                    <div>
-                        Défense spéciale - {{ pokemon.defSpec }}
-                    </div>
-                    <div>
-                       Vitesse -  {{ pokemon.vitesse }}
-                    </div>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <h4> PV </h4>
+                                </td>
+                                <td> {{ pokemon.pv }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width: {{ pokemon.pv }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4> Attaque </h4>
+                                </td>
+                                <td>{{ pokemon.attaque }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width:{{ pokemon.attaque }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4> Défense </h4>
+                                </td>
+                                <td>{{ pokemon.defense }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width:{{ pokemon.defense }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4> Attaque Spé. </h4>
+                                </td>
+                                <td>{{ pokemon.attSpec }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width:{{ pokemon.attSpec }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4> Défense Spé. </h4>
+                                </td>
+                                <td>{{ pokemon.defSpec }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width:{{ pokemon.defSpec }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <h4> Vitesse </h4>
+                                </td>
+                                <td>{{ pokemon.vitesse }}</td>
+                                <td>
+                                    <div class='progressBar'>
+                                        <div class='progressBarDetail' style='width:{{ pokemon.vitesse }}px'>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
                 </div>
+
+            </div>
+            <div class="back-home">
+                <a href="{{path('home')}}">Revenir à la liste</a>
             </div>
 
         </div>
